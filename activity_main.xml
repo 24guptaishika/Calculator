@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/input_box"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:paddingTop="50dp"
+            android:gravity="right"
+            android:inputType="none"
+            android:textSize="40sp"
+            android:background="@color/input_backg_color"
+            android:ems="10"
+            android:hint=""
+            tools:ignore="LabelFor,RtlHardcoded"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/result_box"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="right"
+            android:background="@color/input_backg_color"
+            android:textSize="20sp"
+            tools:ignore="RtlHardcoded"/>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/del_button"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+        android:layout_margin="5dp"
+        android:background="@drawable/backspace_button"
+        android:contentDescription="@string/delete"
+        app:srcCompat="@drawable/backspace_button"
+        tools:ignore="RtlHardcoded" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/but_7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/number_button"
+                android:onClick="onClickNumber"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="@string/seven"
+                android:textSize="24sp"
+                tools:ignore="NestedWeights" />
+
+            <Button
+                android:id="@+id/but_8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/number_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:onClick="onClickNumber"
+                android:text="@string/eight"
+                android:textSize="24sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/number_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:onClick="onClickNumber"
+                android:text="@string/nine"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/butadd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/operation_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:onClick="onClickOperator"
+                android:text="@string/add"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/but_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/number_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:onClick="onClickNumber"
+                android:text="@string/four"
+                android:textSize="24sp"
+                tools:ignore="NestedWeights" />
+
+            <Button
+                android:id="@+id/but_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/number_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:onClick="onClickNumber"
+                android:text="@string/five"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/but_6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/number_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:onClick="onClickNumber"
+                android:text="@string/six"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/butsubtract"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/operation_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:onClick="onClickOperator"
+                android:text="@string/subtract"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/but_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/number_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:onClick="onClickNumber"
+                android:text="@string/one"
+                android:textSize="24sp"
+                tools:ignore="NestedWeights" />
+
+            <Button
+                android:id="@+id/but_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/number_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:onClick="onClickNumber"
+                android:text="@string/two"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/but_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/number_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:onClick="onClickNumber"
+                android:text="@string/three"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/butmul"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/operation_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:onClick="onClickOperator"
+                android:text="@string/multiply"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/butclear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/operation_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:onClick="onClearButton"
+                android:text="@string/clear"
+                android:textSize="24sp"
+                tools:ignore="NestedWeights" />
+
+            <Button
+                android:id="@+id/butzero"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/number_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:onClick="onClickNumber"
+                android:text="@string/zero"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/butdiv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/operation_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:onClick="onClickOperator"
+                android:text="@string/divide"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/butequal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/equal_to_button"
+                android:onClick="equalResult"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="@string/equal"
+                android:textColor="@color/equl_text_color"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
